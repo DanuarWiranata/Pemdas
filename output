@@ -1,0 +1,112 @@
+Selamat datang di program pengolahan nilai
+Jumlah siswa yang ingin diinputkan : 
+2
+Masukkan jumlah mata kuliah yang anda ambil : 
+2
+Pilihan menu program pengolahan angka
+1. Input nilai
+2. Lihat IPK
+3. Keluar
+Masukkan angka : 
+1
+
+Nama siswa : 
+Joko Wadudu
+Mata kuliah : 
+Pemrograman Dasar
+Nilai : 
+90
+Mata kuliah : 
+Bahasa Indonesia
+Nilai : 
+85
+Nama siswa : 
+Megachan
+Mata kuliah : 
+Pemrograman Lanjut
+Nilai : 
+65
+Mata kuliah : 
+Bahasa Inggris
+Nilai : 
+79
+
+Pilihan menu program pengolahan angka
+1. Input nilai
+2. Lihat IPK
+3. Keluar
+Masukkan angka : 
+2
+
+Rekap Nilai Siswa
+--------------------------------------------------------------------
+| No. | Nama Siswa                      | IPK      | Predikat      |
+--------------------------------------------------------------------
+|   1 | Joko Wadudu                     | 3.50     | A             |
+--------------------------------------------------------------------
+|   2 | Megachan                        | 2.88     | B             |
+--------------------------------------------------------------------
+
+
+
+
+
+Selamat datang di program pengolahan nilai
+Jumlah siswa yang ingin diinputkan : 
+1
+Masukkan jumlah mata kuliah yang anda ambil : 
+1
+Pilihan menu program pengolahan angka
+1. Input nilai
+2. Lihat IPK
+3. Keluar
+Masukkan angka : 
+2
+
+Belum ada nilai 
+
+Pilihan menu program pengolahan angka
+1. Input nilai
+2. Lihat IPK
+3. Keluar
+Masukkan angka : 
+1
+
+Nama siswa : 
+Puwan
+Mata kuliah : 
+Pemrograman Dasar
+Nilai : 
+85
+
+Pilihan menu program pengolahan angka
+1. Input nilai
+2. Lihat IPK
+3. Keluar
+Masukkan angka : 
+2
+
+Rekap Nilai Siswa
+--------------------------------------------------------------------
+| No. | Nama Siswa                      | IPK      | Predikat      |
+--------------------------------------------------------------------
+|   1 | Puwan                           | 3.40     | A             |
+--------------------------------------------------------------------
+
+
+
+
+
+Selamat datang di program pengolahan nilai
+Jumlah siswa yang ingin diinputkan : 
+1
+Masukkan jumlah mata kuliah yang anda ambil : 
+1
+Pilihan menu program pengolahan angka
+1. Input nilai
+2. Lihat IPK
+3. Keluar
+Masukkan angka : 
+3
+
+BUILD SUCCESSFUL (total time: 2 seconds)
