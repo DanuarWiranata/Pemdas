@@ -1,0 +1,184 @@
+public class TugasArray {
+
+    /**
+     * @param args the command line arguments
+     */
+        static int jumlahMatkul, jumlahSiswa, rekap = 0, rekap2 = 0;
+        static String [] rekapPredikat = new String [36];
+        static double [] IPK = new double [36];
+        static String [] namaSiswa = new String [36];
+        static String [] NIM = new String [36];
+        static String [] matkul = new String [100];
+        static int [] nilai = new int [100];
+        static String [] huruf = new String [100];
+        static double [] angkaMutu = new double [100];
+        static double [] mutu = new double [36];
+        static String [] predikat = new String [36];
+        static int [] rekapNilai = new int[100];
+        static double [] rekapAngka = new double [100];
+        static String [] rekapHuruf = new String [100];
+        static String [] rekapMatkul = new String [100];
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        System.out.println("Selamat datang di program pengolahan nilai");
+        System.out.println("Jumlah siswa yang ingin diinputkan : ");
+        jumlahSiswa = scan.nextInt();
+        System.out.println("Masukkan jumlah mata kuliah yang anda ambil : ");
+        jumlahMatkul = scan.nextInt();
+        while (true){
+            System.out.println("Pilihan menu program pengolahan angka");
+            System.out.println("1. Input nilai");
+            System.out.println("2. Lihat IPK");
+            System.out.println("3. Keluar");
+            System.out.println("Masukkan angka : ");
+            int menu = scan.nextInt();
+            System.out.println("");
+            switch (menu){
+                case 1:
+                    scan.nextLine();
+                    for (int i = 0; i < jumlahSiswa; i++) {
+                        System.out.println("Nama siswa : ");
+                        namaSiswa[i] = scan.nextLine();
+                        for (int j = 0; j < jumlahMatkul; j++) {
+                            System.out.println("Mata kuliah : ");
+                            matkul[j] = scan.nextLine();
+                            System.out.println("Nilai : ");
+                            nilai[j] = scan.nextInt();
+                            scan.nextLine();
+//                            prosesNilai();
+//                            rekapMatkul[rekap2] = matkul[j];
+//                            rekap2++;
+                    }
+                        prosesIPK();
+                        rekap++;
+                    }
+                    System.out.println("");
+                    break;
+                case 2 :
+                    rekapNilai();
+                    break;
+                case 3 :
+                    System.exit(0);
+                    break;
+            }
+        }
+    }
+    static void rekapNilai(){
+        if (namaSiswa[0] != null){
+            int index = 1;
+            System.out.println("Rekap Nilai Siswa");
+            System.out.println("--------------------------------------------------------------------");
+            System.out.println("| No. | Nama Siswa                      | IPK      | Predikat      |");
+            System.out.println("--------------------------------------------------------------------");
+            for (int i = 0; i < rekap; i++) {
+                System.out.printf("| %3s | %-31s | %-8.2f | %-13s |\n", index, namaSiswa[i], IPK[i], rekapPredikat[i]);
+                System.out.println("--------------------------------------------------------------------");
+                index++;
+            }
+        }
+        else {
+            System.out.println("Belum ada nilai \n");
+        }
+    }
+    
+    static void tambahRekap(double angkaMutu, String predikat){
+        IPK[rekap] = angkaMutu;
+        rekapPredikat[rekap] = predikat;
+    }
+    
+//    static void nilaiSiswa(int nilai, double angkaMutu, String huruf){
+//        rekapNilai[rekap2] = nilai;
+//        rekapAngka[rekap2] = angkaMutu;
+//        rekapHuruf[rekap2] = huruf;
+//    }
+//    
+//    static void lihatNilai(){
+//                    int index = 1;
+//                    if (matkul[0] != null){
+//                        System.out.println("==================================REKAP NILAI==================================");
+//                        System.out.printf("No. | %-15s                            | Nilai | Angka Mutu | Huruf |\n", "Mata Kuliah");
+//                        for (int j = 0; j< rekap2; j++) {
+//                        System.out.printf("%d.  | %-20s                       | %d    | %.2f       | %-2s    |\n", index, rekapMatkul[j], rekapNilai[j], rekapAngka[j], rekapHuruf[j]);
+//                        index++;    
+//                        }
+//                    }
+//                    else {
+//                        System.out.println("Anda belum mengisi nilai");
+//                    }
+//                    System.out.println("");
+//
+//    }
+//    
+//    static void prosesNilai(){
+//        if (matkul[0] != null){
+//                    for (int j = 0; j < jumlahMatkul; j++) {
+//                        angkaMutu[j] = (nilai[j] * 4.0)/100;
+//                        if (nilai[j] > 80){
+//                            huruf[j] = "A";
+//                        }
+//                        else if (nilai[j] > 75 && nilai[j] <= 80){
+//                            huruf[j] = "B+";
+//                        }
+//                        else if (nilai[j] > 69 && nilai[j] <= 75){
+//                            huruf[j] = "B";
+//                        }
+//                        else if (nilai[j] > 60 && nilai[j] <= 69){
+//                            huruf[j] = "C+";
+//                        }
+//                        else if (nilai[j] > 55 && nilai[j] <= 60){
+//                            huruf[j] = "C";
+//                        }
+//                        else if (nilai[j] > 50 && nilai[j] <= 55){
+//                            huruf[j] = "D+";
+//                        }
+//                        else if (nilai[j] > 44 && nilai[j] <= 50){
+//                            huruf[j] = "D";
+//                        }
+//                        else {
+//                            huruf[j] = "E";
+//                        }
+//                        nilaiSiswa(nilai[j], angkaMutu[j], huruf[j]);
+//                    }
+//                    }
+//    }
+    
+    static void prosesIPK(){
+        double mutuAkhir = 0;
+        for (int k = 0; k < jumlahMatkul; k++) {
+                        angkaMutu[k] = (nilai[k] * 4.0)/100;
+                    }
+                    for (double jumlahMutu : angkaMutu){
+                        mutuAkhir = mutuAkhir + jumlahMutu;
+                    }
+                    for (int i = 0; i < namaSiswa.length; i++) {
+                        mutu[i] = mutuAkhir;
+                        mutu[i] /= jumlahMatkul;
+                    if (mutu[i] > 3.2){
+                        predikat[i] = "A";
+                    }
+                    else if (mutu[i] > 3.0 && mutu[i] <= 3.2){
+                        predikat[i] = "B+";
+                    }
+                    else if (mutu[i] > 2.76 && mutu[i] <= 3.0){
+                        predikat[i] = "B";
+                    }
+                    else if (mutu[i] > 2.4 && mutu[i] <= 2.76){
+                        predikat[i] = "C+";
+                    }
+                    else if (mutu[i] > 2.2 && mutu[i] <= 2.4){
+                        predikat[i] = "C";
+                    }
+                    else if (mutu[i] > 2.0 && mutu[i] <= 2.2){
+                        predikat[i] = "D+";
+                    }
+                    else if (mutu[i] > 1.76 && mutu[i] <= 2.0){
+                        predikat[i] = "D";
+                    }
+                    else {
+                        predikat[i] = "E";
+                    }
+                    tambahRekap(mutu[i], predikat[i]);
+        }
+                    
+    }
+}
